@@ -22,13 +22,14 @@ Using an RTL-SDR device to capture some samples with *Universal Radio Hacker* th
 # Encoding
 I'm sure someone with actual experience decoding/encoding RF will know way more about this than me but as far as I can see there is a 
 Header of 14 bits, followed by 6 bits of data, 2 bits destination, X bit Command (On/Off), 3 bits source, 1 bit checksum.  
+
 Each data bit is preceded by a 01 transition
 
 111010101010111 01 D 01 D 01 C 01 S 01 S 01 S 01 C
 
-Header: 111010101010111
-DD: 2 bits Destination switch (0-4)
-X:  1 bit Command (On/OFF)
-SSS: 3 bits Source (0-7)
-C: 1 bit Checksum (sum(DDXSSS))
+* Header: 111010101010111
+* DD: 2 bits Destination switch (0-4)
+* X:  1 bit Command (On/OFF)
+* SSS: 3 bits Source (0-7)
+* C: 1 bit Checksum (sum(DDXSSS))
 
